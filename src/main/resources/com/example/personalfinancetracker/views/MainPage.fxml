@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.personalfinancetracker.controllers.MainPageController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <!-- Title label with styling -->
+    <Label text="Personal Finance Tracker"
+           layoutX="150.0" layoutY="50.0"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+    <!-- Button to access Finance Dashboard -->
+    <Button text="Go to Dashboard"
+            layoutX="225.0" layoutY="150.0"
+            style="-fx-font-size: 16px; -fx-background-color: #3498db; -fx-text-fill: white; -fx-padding: 10px 20px;"
+            onAction="#handleGoToDashboard" />
+
+    <!-- Button to view Account Settings -->
+    <Button text="Account Settings"
+            layoutX="225.0" layoutY="200.0"
+            style="-fx-font-size: 16px; -fx-background-color: #2ecc71; -fx-text-fill: white; -fx-padding: 10px 20px;"
+            onAction="#handleAccountSettings" />
+
+    <!-- Button to view Transactions -->
+    <Button text="View Transactions"
+            layoutX="225.0" layoutY="250.0"
+            style="-fx-font-size: 16px; -fx-background-color: #e74c3c; -fx-text-fill: white; -fx-padding: 10px 20px;"
+            onAction="#handleViewTransactions" />
+
+    <!-- Footer with an app version -->
+    <Label text="v1.0 - Personal Finance Tracker"
+           layoutX="240.0" layoutY="350.0"
+           style="-fx-font-size: 12px; -fx-text-fill: #7f8c8d;" />
+
+</AnchorPane>

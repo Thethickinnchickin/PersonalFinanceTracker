@@ -1,0 +1,13 @@
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.DashboardController">
+    <TableView fx:id="transactionsTable">
+        <columns>
+            <TableColumn text="Date"/>
+            <TableColumn text="Type"/>
+            <TableColumn text="Category"/>
+            <TableColumn text="Amount"/>
+        </columns>
+    </TableView>
+    <Button text="Add Transaction" onAction="#addTransaction"/>
+</VBox>

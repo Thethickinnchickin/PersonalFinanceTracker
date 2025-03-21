@@ -6,6 +6,21 @@ plugins {
     id 'org.beryx.jlink' version '2.25.0'
 }
 
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+
+javafx {
+    version = "21"
+    sdk = "C:/javafx-sdk-21/javafx-sdk-21.0.6"
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.media', 'javafx.graphics', 'javafx.base']
+}
+
 group 'com.example'
 version '1.0-SNAPSHOT'
 
@@ -26,27 +41,34 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.example.personalfinancetracker'
-    mainClass = 'com.example.personalfinancetracker.HelloApplication'
-}
-
-javafx {
-    version = '21-ea+24'
-    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web']
+    mainClass = 'com.example.personalfinancetracker.Main'
 }
 
 dependencies {
-    implementation('org.controlsfx:controlsfx:11.1.2')
+    // UI Components
+    implementation 'org.controlsfx:controlsfx:11.1.2'
     implementation('com.dlsc.formsfx:formsfx-core:11.6.0') {
-        exclude(group: 'org.openjfx')
+        exclude group: 'org.openjfx'
     }
-    implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
-    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
-    implementation('eu.hansolo:tilesfx:17.1.17') {
-        exclude(group: 'org.openjfx')
-    }
+    implementation 'org.kordamp.ikonli:ikonli-javafx:12.3.1'
+    implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    // Database (SQLite)
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+
+    // JavaFX Dependencies (Explicitly Declared)
+
+    implementation 'org.openjfx:javafx-controls:21.0.6'
+    implementation 'org.openjfx:javafx-fxml:21.0.6'
+
+    implementation "org.openjfx:javafx-web:21"
+    implementation "org.openjfx:javafx-media:21"
+    implementation "org.openjfx:javafx-graphics:21"
+    implementation "org.openjfx:javafx-base:21"
+
+    // Testing Dependencies
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junitVersion}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitVersion}"
 }
 
 test {

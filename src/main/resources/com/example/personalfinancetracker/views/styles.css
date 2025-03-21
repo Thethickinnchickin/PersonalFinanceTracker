@@ -1,0 +1,109 @@
+/* styles.css */
+
+/* Apply general styling to the entire GridPane */
+.grid-pane {
+    -fx-padding: 20;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-alignment: center;
+    -fx-background-color: #f4f4f9;
+}
+
+#gridPane {
+    -fx-padding: 20;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-alignment: center;
+    -fx-background-color: #f4f4f9;
+    -fx-hgap: 5;
+}
+
+#usernameField, #passwordField {
+    -fx-pref-width: 300px; /* Set the preferred width of the text fields */
+    -fx-padding: 10px; /* Optional: Add padding inside the text field */
+    -fx-font-size: 14px; /* Adjust the font size if needed */
+}
+
+#usernameField:focused, #passwordField:focused {
+    -fx-border-color: blue; /* Optional: Change border color when the text field is focused */
+    -fx-border-width: 2px; /* Optional: Add thickness to the border when focused */
+}
+
+/* Style the labels */
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Style the text field and password field */
+.text-field, .password-field {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5;
+    -fx-focus-color: #66afe9;
+}
+
+/* Style the button */
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #888, 10, 0, 0, 1);
+}
+
+/* Change button color on hover */
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Style the grid cells */
+.grid-pane > * {
+    -fx-alignment: center-left;
+}
+
+/* Center the grid pane on the screen */
+.centered-grid-pane {
+    -fx-alignment: center;
+    -fx-max-width: 400px;
+    -fx-max-height: 300px;
+}
+.title-label {
+    -fx-font-size: 24px; /* Larger font size */
+    -fx-font-weight: bold; /* Bold font */
+    -fx-text-fill: #2f4f4f; /* Dark color for the text */
+    -fx-alignment: center; /* Center the title */
+    -fx-padding: 20px; /* Add some padding around the title */
+}
+/* Adjust button styling to ensure they are close together */
+.button, .button-blue {
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px; /* Reduce padding for tighter buttons */
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #888, 10, 0, 0, 1);
+}
+
+.button-blue {
+    -fx-background-color: white;
+    -fx-border-color: blue;
+    -fx-text-fill: blue;
+}
+
+.button-blue:hover {
+    -fx-background-color: lightblue;
+    -fx-border-color: blue;
+    -fx-text-fill: darkblue;
+}
+
+
+/* Styling for buttons placed next to each other */
+.button, .button-blue {
+    -fx-max-width: 120px; /* Set a max width for consistency */
+}

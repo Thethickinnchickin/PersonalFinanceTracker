@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.personalfinancetracker.controllers.RegisterController"
+          stylesheets="@styles.css" fx:id="gridPane" prefWidth="800" prefHeight="600"> <!-- Link to the CSS file -->
+    <Label text="Registration" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="2"
+           styleClass="title-label" />
+    <Label text="Username:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="usernameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <!-- Adjusted button placement: both on row 3 in columns 1 and 2 -->
+    <Button styleClass="button-blue" text="Back To Login" onAction="#showLoginPage" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
+    <Button text="Register" onAction="#handleRegistration" GridPane.rowIndex="3" GridPane.columnIndex="1" GridPane.halignment="CENTER"/>
+</GridPane>
